@@ -1,6 +1,7 @@
-package com.harshmadhani;
+package com.harshmadhani.resource;
 
 import com.harshmadhani.model.PullRequest;
+import com.harshmadhani.service.PullRequestService;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import javax.inject.Inject;

@@ -1,4 +1,4 @@
-package com.harshmadhani;
+package com.harshmadhani.service;
 
 import com.harshmadhani.model.PullRequest;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
