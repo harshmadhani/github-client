@@ -11,14 +11,14 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("/pr")
+@Path("/github")
 public class PullRequestResource {
     @Inject
     @RestClient
     PullRequestService pullRequestService;
 
     @GET
-    @Path("/{prNumber}")
+    @Path("/pr/{prNumber}")
     @Produces(MediaType.APPLICATION_JSON)
     public PullRequest getPullRequest(@PathParam("prNumber") String prNumber){
         return pullRequestService.getPullRequestByNumber(prNumber);
