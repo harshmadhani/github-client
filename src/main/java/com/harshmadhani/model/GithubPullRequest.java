@@ -3,7 +3,7 @@ package com.harshmadhani.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class PullRequest {
+public class GithubPullRequest {
     public String number;
     public String state;
     public Milestone milestone;

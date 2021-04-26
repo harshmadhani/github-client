@@ -1,7 +1,7 @@
 package com.harshmadhani.resource;
 
-import com.harshmadhani.model.PullRequest;
-import com.harshmadhani.service.PullRequestService;
+import com.harshmadhani.model.GithubPullRequest;
+import com.harshmadhani.service.GithubPullRequestService;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import javax.inject.Inject;
@@ -12,15 +12,15 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Path("/github")
-public class PullRequestResource {
+public class GithubPullRequestResource {
     @Inject
     @RestClient
-    PullRequestService pullRequestService;
+    GithubPullRequestService githubPullRequestService;
 
     @GET
     @Path("/pr/{prNumber}")
     @Produces(MediaType.APPLICATION_JSON)
-    public PullRequest getPullRequest(@PathParam("prNumber") String prNumber){
-        return pullRequestService.getPullRequestByNumber(prNumber);
+    public GithubPullRequest getPullRequest(@PathParam("prNumber") String prNumber){
+        return githubPullRequestService.getPullRequestByNumber(prNumber);
     }
 }
